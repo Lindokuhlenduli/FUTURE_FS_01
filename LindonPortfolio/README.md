@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Welcome to my Personal Professional Portfolio 
 
 TODO: Document your project here
