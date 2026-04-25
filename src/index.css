@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 330 30% 96%;
+    --foreground: 280 20% 18%;
+
+    --card: 330 25% 97%;
+    --card-foreground: 280 20% 18%;
+
+    --popover: 330 25% 97%;
+    --popover-foreground: 280 20% 18%;
+
+    --primary: 175 50% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 30% 92%;
+    --secondary-foreground: 280 15% 30%;
+
+    --muted: 330 15% 91%;
+    --muted-foreground: 280 10% 45%;
+
+    --accent: 290 35% 60%;
+    --accent-foreground: 290 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 330 20% 87%;
+    --input: 330 20% 87%;
+    --ring: 175 50% 42%;
+
+    --radius: 1.25rem;
+
+    --teal: 175 50% 42%;
+    --pink: 340 60% 70%;
+    --purple: 290 35% 60%;
+    --green: 150 35% 60%;
+    --gold: 42 70% 55%;
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+
+    --gradient-primary: linear-gradient(135deg, hsl(175, 50%, 42%), hsl(290, 35%, 60%), hsl(340, 60%, 70%));
+    --gradient-warm: linear-gradient(135deg, hsl(340, 60%, 70%), hsl(42, 70%, 55%));
+    --gradient-card: linear-gradient(145deg, hsl(330, 25%, 99%), hsl(330, 30%, 95%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.75), hsl(330 25% 97% / 0.5));
+    --shadow-glow: 0 0 40px -10px hsl(175 50% 42% / 0.2);
+    --shadow-card: 0 8px 32px -8px hsl(290 35% 50% / 0.08);
+    --shadow-glass: 0 8px 32px 0 hsl(330 25% 50% / 0.06);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    cursor: none;
+  }
+
+  a, button, [role="button"], input, textarea, select {
+    cursor: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient-warm {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-warm);
+  }
+
+  .glow-border {
+    box-shadow: var(--shadow-glow);
+    @apply border border-primary/30;
+  }
+
+  .card-elevated {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-glass);
+    @apply border border-border/60 rounded-2xl;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 px-6;
+  }
+
+  .glass-effect {
+    background: hsl(0 0% 100% / 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 100% / 0.35);
+  }
+
+  .blob-shape {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
