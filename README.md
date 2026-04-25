@@ -1,10 +1,10 @@
 # FUTURE_FS_01
-TASK 1: PERSONAL PROFESSIONAL PORTFOLIO
-# Lindokuhle Nduli - Professional Portfolio
+
+## Lindokuhle Nduli - Professional Portfolio
 
 A modern, interactive portfolio website built with React, TypeScript, and Tailwind CSS. This single-page application showcases professional background, skills, education, experience, and projects with smooth animations and a polished user experience.
 
-**Live Site:** Deployed on [Vercel](https://lindonportfolio.netlify.app)
+**Live Site:** [https://lindonportfolio.vercel.app/](https://lindonportfolio.vercel.app/)
 
 ---
 
@@ -56,7 +56,6 @@ A modern, interactive portfolio website built with React, TypeScript, and Tailwi
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18 or higher)
-- [Bun](https://bun.sh/) (recommended) or npm
 
 ### Installation
 
@@ -66,8 +65,6 @@ git clone https://github.com/Lindokuhlenduli/FUTURE_FS_01.git
 cd FUTURE_FS_01
 
 # Install dependencies
-bun install
-# or
 npm install
 ```
 
@@ -75,8 +72,6 @@ npm install
 
 ```bash
 # Start the development server (runs on port 8080)
-bun run dev
-# or
 npm run dev
 ```
 
@@ -84,8 +79,6 @@ npm run dev
 
 ```bash
 # Create a production build
-bun run build
-# or
 npm run build
 ```
 
@@ -139,10 +132,11 @@ src/
 
 ## Deployment
 
-This project is configured for deployment on Netlify. The `netlify.toml` file handles build settings:
+This project is configured for deployment on Vercel.
 
-- **Build command:** `bun run build`
-- **Publish directory:** `dist`
+- **Production URL:** [https://lindonportfolio.vercel.app/](https://lindonportfolio.vercel.app/)
+- **Build command:** `npm run build`
+- **Output directory:** `dist`
 
 ## License
 
